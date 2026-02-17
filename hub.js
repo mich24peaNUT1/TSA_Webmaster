@@ -64,33 +64,56 @@ const categoryList = {
     Youth: "Youth",
     Education: "Education",
     Veteran: "Veteran",
+    Crisis: "Crisis",
 }
+
+CrisisLine = new cardClass(
+    "Emergence Health Network Crisis Line",
+    "For mental health emergencies and substance use support.",
+    categoryList.Crisis,
+    "(915) 779-1800"
+)
 
 ElPasoHelps = new cardClass(
     "El Paso Helps",
     'A centralized hub that connects you with a "Resilience Navigator" for housing and basic needs.',
     categoryList.Housing,
-    "(915) 400-7401")
+    "(915) 400-7401"
+)
+
+OpportunityCenter = new cardClass(
+    "Opportunity Center for the Homeless",
+    "Offers emergency shelter, meals, and laundry services.",
+    categoryList.Housing,
+    "(915) 577-0069"
+)
 
 FoodBank = new cardClass(
     "El Pasoans Fighting Hunger Food Bank",
     "They operate mobile pantries and home delivery for seniors/homebound individuals.",
     categoryList.Food,
-    "(915) 298-0353")
+    "(915) 298-0353"
+)
 
 ElPasoHealth = new cardClass(
     "City of El Paso Public Health",
     "Offers dental clinics, immunizations, and WIC services (food assistance for women and children).",
     categoryList.Health,
-    "(915) 212-0200")
+    "(915) 212-0200"
+)
 
 VeteranAssistance = new cardClass(
     "County Veterans Assistance Office",
     "Helps veterans navigate earned benefits and entitlements.",
     categoryList.Veteran,
-    "(915) 273-3454")
+    "(915) 273-3454"
+)
 
+
+
+CrisisLine.CreateNode()
 ElPasoHelps.CreateNode()
+OpportunityCenter.CreateNode()
 FoodBank.CreateNode()
 ElPasoHealth.CreateNode()
 VeteranAssistance.CreateNode()
