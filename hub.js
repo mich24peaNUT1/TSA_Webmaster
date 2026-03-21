@@ -118,7 +118,7 @@ FoodBank.CreateNode()
 ElPasoHealth.CreateNode()
 VeteranAssistance.CreateNode()
 
-
+/*
 // 2. Initialize the App with your App ID
 const APP_ID = "mdb_sa_id_6992827c7a33c0edd85bd618"; //may want remove begining before numbers
 const app = new Realm.App({ id: APP_ID });
@@ -148,3 +148,17 @@ async function runSearch() {
         </div>
     `).join('');
 }
+*/
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv:// jenriq03_db_user:TSAEldo26@tsa.gwc6rkk.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
+ 
+async function run() {
+  try {
+    await client.connect();
+    console.log("Connected to MongoDB!");
+  } finally {
+    await client.close();
+  }
+}
+run().catch(console.dir);
